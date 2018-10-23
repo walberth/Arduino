@@ -5,27 +5,27 @@ import win32api
 ventana = Tk()
 ventana.geometry("300x200")
 ventana.title('CONTROL DE LAMPARA')
-# arduino = serial.Serial('COM3', 9600)
+arduino = serial.Serial('COM3', 9600)
 
 def Horario():
-    # arduino.write('a')
-    win32api.MessageBox(0, 'Horario', 'title')
+    arduino.write(str.encode('a'))
+    # win32api.MessageBox(0, 'Horario', 'title')
 
 def AntiHorario():
-    # arduino.write('b')
-    win32api.MessageBox(0, 'AntiHorario', 'title')
+    arduino.write(str.encode('c'))
+    # win32api.MessageBox(0, 'AntiHorario', 'title')
 
 def Parar():
-    # arduino.write('c')
-    win32api.MessageBox(0, 'Parar', 'title')
+    arduino.write(str.encode('b'))
+    # win32api.MessageBox(0, 'Parar', 'title')
 
 def Mas():
-    # arduino.write('d')
-    win32api.MessageBox(0, 'Mas', 'title')
+    arduino.write(str.encode('d'))
+    # win32api.MessageBox(0, 'Mas', 'title')
 
 def Menos():
-    # arduino.write('e')
-    win32api.MessageBox(0, 'Menos', 'title')
+    arduino.write(str.encode('e'))
+    # win32api.MessageBox(0, 'Menos', 'title')
 
 label = Label(ventana)
 label.pack()
